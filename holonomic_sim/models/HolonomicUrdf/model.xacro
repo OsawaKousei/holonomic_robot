@@ -1,0 +1,43 @@
+<robot name="HolonomicUrdf" xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:include filename="$(find holonomic_sim)/models/xacro/common.xacro"/>
+
+    <link name="base_footprint"/>
+
+    <xacro:property name="base_size" value="0.3"/>
+    <xacro:rectangular_link_macro suffix="base" mass="20.0" arg="20.0" width="${base_size}" height="${base_size/2}" depth="${base_size}" if_collision="false" if_visual="true"/>
+    <joint name="base_joint" type="fixed">
+        <parent link="base_footprint"/>
+        <child  link="base_link"/>
+    </joint>
+
+    <xacro:steer_macro suffix="wheel" parent="base_link" base_radius="0.3" wheel_radius="0.2" x="0" y="0" z="0" wheel_offset="0.15"/>
+    <xacro:four_wheel_caster_macro parent="base_link" base_radius="${sqrt(base_size/2*base_size/2*2)}" caster_radius="0.035" z_offset="-0.015"/>
+
+    <xacro:lidar_macro suffix="base" parent="base_link" x="0.15" y="0" z="0.025" rate="20" max_range="20" samples="270" angle="135" noise="0.01"/>
+    
+    <gazebo>
+        <!-- Global odometer -->
+        <plugin
+            filename="ignition-gazebo-odometry-publisher-system"
+            name="ignition::gazebo::systems::OdometryPublisher">
+            <odom_publish_frequency>10</odom_publish_frequency>
+            <odom_topic>/odom</odom_topic>
+            <odom_frame>odom</odom_frame>
+            <robot_base_frame>base_footprint</robot_base_frame>
+            <tf_topic>/odom/tf</tf_topic>
+        </plugin>
+
+        <!-- Joint state publisher -->
+        <plugin filename="libignition-gazebo-joint-state-publisher-system.so" 
+            name="ignition::gazebo::systems::JointStatePublisher">
+            <topic>joint_states</topic>
+        </plugin>
+
+        <!-- Holonomic plugin -->
+        <plugin filename="libHolonomicPlugin.so" name="holonomic_sim::HolonomicPlugin">
+            <wheel_joint>wheel_joint</wheel_joint>
+            <top_base_joint>top_wheel_base_joint</top_base_joint>
+            <bottom_base_joint>bottom_wheel_base_joint</bottom_base_joint>
+        </plugin>
+    </gazebo>
+</robot>

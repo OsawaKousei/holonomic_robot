@@ -1,0 +1,293 @@
+<sdf version='1.8'>
+  <model name="HolonomicRobo">
+  <pose>0 0 0 0 0 0</pose>
+
+    <link name="base_footprint"/>
+
+    <link name="base_link">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial> <!--inertial properties of the link mass, inertia matix-->
+        <mass>114.395</mass>
+        <inertia>
+            <ixx>9.5329</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>38.1317</iyy>
+            <iyz>0</iyz>
+            <izz>47.6646</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <geometry>
+            <box>
+                <size>1.0 1.0 0.5</size>
+            </box>
+        </geometry>
+        <!--let's add color to our link-->
+        <material>
+            <ambient>0.0 0.0 1.0 1</ambient>
+            <diffuse>0.0 0.0 1.0 1</diffuse>
+            <specular>0.0 0.0 1.0 1</specular>
+        </material>
+      </visual>
+    </link>
+
+    <joint name="base_joint" type="fixed">
+      <parent>base_footprint</parent>
+      <child>base_link</child>
+    </joint>
+
+    <link name='caster_back_left_link'>
+      <pose>-0.5 0.5 0 0 0 0</pose>
+      <inertial>
+        <mass>0.3</mass>
+        <inertia>
+          <ixx>3600000</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>3600000</iyy>
+          <iyz>0.0</iyz>
+          <izz>3600000</izz>
+        </inertia>
+      </inertial>
+      <visual name='caster_back_left_visual'>
+          <geometry>
+              <sphere>
+                  <radius>0.3</radius>
+              </sphere>
+          </geometry>
+          <material>
+              <ambient>0.0 1 0.0 1</ambient>
+              <diffuse>0.0 1 0.0 1</diffuse>
+              <specular>0.0 1 0.0 1</specular>
+          </material>
+        </visual>
+      <collision name='caster_back_left_collision'>
+        <geometry>
+          <sphere>
+            <radius>0.3</radius>
+          </sphere>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='caster_back_left_joint' type='ball'>
+      <parent>base_link</parent>
+      <child>caster_back_left_link</child>
+    </joint>
+
+    <link name='caster_back_right_link'>
+      <pose>-0.5 -0.5 0 0 0 0</pose>
+      <inertial>
+        <mass>0.3</mass>
+        <inertia>
+          <ixx>3600000</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>3600000</iyy>
+          <iyz>0.0</iyz>
+          <izz>3600000</izz>
+        </inertia>
+      </inertial>
+      <visual name='caster_back_right_visual'>
+          <geometry>
+              <sphere>
+                  <radius>0.3</radius>
+              </sphere>
+          </geometry>
+          <material>
+              <ambient>0.0 1 0.0 1</ambient>
+              <diffuse>0.0 1 0.0 1</diffuse>
+              <specular>0.0 1 0.0 1</specular>
+          </material>
+        </visual>
+      <collision name='caster_back_right_collision'>
+        <geometry>
+          <sphere>
+            <radius>0.3</radius>
+          </sphere>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='caster_back_right_joint' type='ball'>
+      <parent>base_link</parent>
+      <child>caster_back_right_link</child>
+    </joint>
+
+    <link name='caster_front_left_link'>
+      <pose>0.5 0.5 0 0 0 0</pose>
+      <inertial>
+        <mass>0.3</mass>
+        <inertia>
+          <ixx>3600000</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>3600000</iyy>
+          <iyz>0.0</iyz>
+          <izz>3600000</izz>
+        </inertia>
+      </inertial>
+      <visual name='caster_front_left_visual'>
+          <geometry>
+              <sphere>
+                  <radius>0.3</radius>
+              </sphere>
+          </geometry>
+          <material>
+              <ambient>0.0 1 0.0 1</ambient>
+              <diffuse>0.0 1 0.0 1</diffuse>
+              <specular>0.0 1 0.0 1</specular>
+          </material>
+        </visual>
+      <collision name='caster_front_leftcollision'>
+        <geometry>
+          <sphere>
+            <radius>0.3</radius>
+          </sphere>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='caster_front_left_joint' type='ball'>
+      <parent>base_link</parent>
+      <child>caster_front_left_link</child>
+    </joint>
+
+    <link name='caster_front_right_link'>
+      <pose>0.5 -0.5 0 0 0 0</pose>
+      <inertial>
+        <mass>0.3</mass>
+        <inertia>
+          <ixx>3600000</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>3600000</iyy>
+          <iyz>0.0</iyz>
+          <izz>3600000</izz>
+        </inertia>
+      </inertial>
+      <visual name='caster_front_right_visual'>
+          <geometry>
+              <sphere>
+                  <radius>0.3</radius>
+              </sphere>
+          </geometry>
+          <material>
+              <ambient>0.0 1 0.0 1</ambient>
+              <diffuse>0.0 1 0.0 1</diffuse>
+              <specular>0.0 1 0.0 1</specular>
+          </material>
+        </visual>
+      <collision name='caster_front_right_collision'>
+        <geometry>
+          <sphere>
+            <radius>0.3</radius>
+          </sphere>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='caster_front_right_joint' type='ball'>
+      <parent>base_link</parent>
+      <child>caster_front_right_link</child>
+    </joint>
+
+    <link name="wheel_base_link">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <inertia>
+          <ixx>233333.333333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>233333.333333</iyy>
+          <iyz>0</iyz>
+          <izz>450000</izz>
+      </inertia>
+      <mass>0.01</mass>
+      </inertial>
+      <visual name="wheel_base_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.3</radius>
+            <length>0.1</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <ambient>1.0 0.0 0.0 1</ambient>
+            <diffuse>1.0 0.0 0.0 1</diffuse>
+            <specular>1.0 0.0 0.0 1</specular>
+          </material>
+      </visual>
+    </link>
+    <joint name="wheel_base_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>wheel_base_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <link name="wheel_link">
+      <pose>0 0 0 -1.57 0 0</pose>
+      <inertial>
+        <inertia>
+          <ixx>2.333333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>2.333333</iyy>
+          <iyz>0</iyz>
+          <izz>4.5</izz>
+      </inertia>
+      <mass>0.0000001</mass>
+      </inertial>
+      <collision name="wheel_collision">
+        <geometry>
+          <cylinder>
+            <radius>0.3</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="wheel_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.3</radius>
+            <length>0.1</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <ambient>1.0 0.0 0.0 1</ambient>
+            <diffuse>1.0 0.0 0.0 1</diffuse>
+            <specular>1.0 0.0 0.0 1</specular>
+          </material>
+      </visual>
+    </link>
+    <joint name="wheel_joint" type="revolute">
+      <parent>wheel_base_link</parent>
+      <child>wheel_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <!-- Global odometer -->
+    <plugin
+      filename="ignition-gazebo-odometry-publisher-system"
+      name="ignition::gazebo::systems::OdometryPublisher">
+      <odom_publish_frequency>50</odom_publish_frequency>
+      <odom_topic>/odom</odom_topic>
+      <odom_frame>odom</odom_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+      <tf_topic>/odom/tf</tf_topic>
+    </plugin>
+
+    <!-- Joint state publisher -->
+    <plugin filename="libignition-gazebo-joint-state-publisher-system.so" 
+      name="ignition::gazebo::systems::JointStatePublisher">
+      <topic>joint_states</topic>
+    </plugin>
+
+    <plugin filename="libHolonomicPlugin.so" name="holonomic_sim::HolonomicPlugin">
+      <wheel_joint>wheel_joint</wheel_joint>
+      <base_joint>wheel_base_joint</base_joint>
+    </plugin>
+    
+  </model>
+</sdf>
