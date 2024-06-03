@@ -14,6 +14,6 @@
 - Ofcourse, user made ros2 node publish /cmd_vel is available
 
 # image
-![alt text](https://github.com/OsawaKousei/holonomic/main/img/sim_img.png?raw=true)
-![alt text](https://github.com/OsawaKousei/holonomic/main/img/rviz2_img.png?raw=true)
-![alt text](https://github.com/OsawaKousei/holonomic/main/img/total_img.png?raw=true)
+![alt text](https://github.com/OsawaKousei/holonomic_robot/tree/main/img/sim_img.png?raw=true)
+![alt text](https://github.com/OsawaKousei/holonomic_robot/tree/main/img/rviz2_img.png?raw=true)
+![alt text](https://github.com/OsawaKousei/holonomic_robot/tree/main/img/total_img.png?raw=true)
