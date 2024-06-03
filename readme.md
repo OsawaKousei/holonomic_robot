@@ -15,5 +15,5 @@
 
 # image
 ![alt text](https://github.com/OsawaKousei/holonomic_robot/tree/main/img/sim_img.png?raw=true)
-![alt text](https://github.com/OsawaKousei/holonomic_robot/tree/main/img/rviz2_img.png?raw=true)
+![alt text](https://github.com/OsawaKousei/holonomic_robot/blob/main/img/rviz2_img.png)
 ![alt text](https://github.com/OsawaKousei/holonomic_robot/tree/main/img/total_img.png?raw=true)
