@@ -1,3 +1,9 @@
+/**
+ * @file robot_vel.cpp
+ * @brief Robot velocity publisher for holonomic simulation
+ * @author kousei
+ * @date 2024-05-29
+*/
 #include "holonomic_sim/robot_vel.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 #include "nav_msgs/msg/odometry.hpp"

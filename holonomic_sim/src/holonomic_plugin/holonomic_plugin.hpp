@@ -1,3 +1,9 @@
+/**
+ * @file holonomic_plugin.hpp
+ * @brief Holonomic plugin for holonomic simulation
+ * @author kousei
+ * @date 2024-05-29
+*/
 #include <ignition/gazebo/Model.hh>
 #include <ignition/gazebo/System.hh>
 #include <ignition/transport/Node.hh>

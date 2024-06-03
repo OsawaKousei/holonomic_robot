@@ -1,3 +1,9 @@
+/**
+ * @file robot_vel.hpp
+ * @brief Robot velocity publisher for holonomic simulation
+ * @author kousei
+ * @date 2024-05-29
+*/
 #ifndef HOLONOMIC_SIM__ROBOT_VEL_HPP_
 #define HOLONOMIC_SIM__ROBOT_VEL_HPP_
 

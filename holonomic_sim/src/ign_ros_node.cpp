@@ -1,3 +1,9 @@
+/**
+ * @file ign_ros_node.cpp
+ * @brief ROS 2 node for holonomic simulation
+ * @author kousei
+ * @date 2024-05-29
+*/
 #include <rclcpp/rclcpp.hpp>
 
 #include <holonomic_sim/robot_vel.hpp>

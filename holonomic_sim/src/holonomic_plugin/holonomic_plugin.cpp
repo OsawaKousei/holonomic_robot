@@ -1,4 +1,9 @@
-
+/**
+ * @file holonomic_plugin.cpp
+ * @brief Holonomic plugin for holonomic simulation
+ * @author kousei
+ * @date 2024-05-29
+*/
 #include "holonomic_plugin.hpp"
 #include <ignition/gazebo/components/JointPositionReset.hh>
 #include <ignition/gazebo/components/JointVelocityCmd.hh>

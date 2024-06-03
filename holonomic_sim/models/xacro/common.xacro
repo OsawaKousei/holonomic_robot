@@ -142,6 +142,7 @@
         <xacro:sphere_macro suffix="caster4" parent="${parent}" mass="0.3" arg="0.3" radius="${caster_radius}" x="${x}" y="${-x}" z="${z_offset}"/>
     </xacro:macro>
 
+    <!-- holonomic steer macro -->
     <xacro:macro name="steer_macro" params="suffix parent base_radius wheel_radius wheel_offset x y z">
         <xacro:cylinder_link_macro suffix="top_${suffix}_base" mass="1.0" arg="1.0" radius="${base_radius}" length="0.001" if_collision="false" if_visual="false"/>
         <joint name="top_${suffix}_base_joint" type="continuous">
