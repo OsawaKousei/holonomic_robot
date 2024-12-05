@@ -1,6 +1,6 @@
-# requrements
+# requirements
 - ROS 2 humble
-- gazebo fortless
+- gazebo fortress
 
 # usage
 ## launch
