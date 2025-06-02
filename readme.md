@@ -19,6 +19,7 @@
 
 -   User can teleop this holonomic robot using teleop keyboard on GUI
 -   Or sending ROS2 /cmd_vel topic from rqt
+-   Or connect joy controller
 -   Ofcourse, user made ros2 node publish /cmd_vel is available
 
 # image
