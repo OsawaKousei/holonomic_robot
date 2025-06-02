@@ -156,6 +156,14 @@ def generate_launch_description() -> LaunchDescription:
         output='screen',
     )
 
+    # launch joy_node
+    joy_node = Node(
+        package='joy',
+        executable='joy_node',
+        name='joy_node',
+        output='screen',
+    )
+
     # launch the ign_ros_node
     ign_debug = Node(
         package='holonomic_sim',
@@ -184,6 +192,7 @@ def generate_launch_description() -> LaunchDescription:
             rqt,
             robot_state_publisher,
             rviz2,
+            joy_node,
             ign_debug,
         ]
     )

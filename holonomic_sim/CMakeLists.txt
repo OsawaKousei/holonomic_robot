@@ -44,9 +44,14 @@ ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/hooks/${PROJECT_NAME}.dsv.i
 
 ament_auto_add_library(robot_vel src/robot_vel.cpp)
 rclcpp_components_register_nodes(robot_vel "holonomic_sim::robotVel")
+
+ament_auto_add_library(teleop src/teleop.cpp)
+rclcpp_components_register_nodes(teleop "holonomic_sim::Teleop")
+
 ament_auto_add_executable(
 ign_ros_node src/ign_ros_node.cpp
   src/robot_vel.cpp
+  src/teleop.cpp
 )
 
 if(BUILD_TESTING)
