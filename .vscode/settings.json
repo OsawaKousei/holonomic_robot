@@ -77,4 +77,43 @@
         "typeinfo": "cpp",
         "variant": "cpp"
     },
+    "C_Cpp.formatting": "clangFormat",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "black-formatter.args": [
+        "--skip-string-normalization"
+    ],
+    "isort.args": ["--profile", "black"],
+    "flake8.severity": {
+        "E": "Warning",
+        "F": "Warning",
+        "I": "Warning"
+    },
+    "flake8.args": [
+        "--max-line-length=88",
+        "--ignore=E203,E501,W503",
+        "--exclude=.git,__pycache__,.venv,.mypy_cache,.pytest_cache"
+    ],
+    "mypy-type-checker.args": [
+        "--warn-return-any",
+        "--no-implicit-optional",
+        "--disallow-untyped-calls",
+        "--disallow-untyped-defs",
+        "--ignore-missing-imports",
+        "--follow-imports=skip"
+    ],
+    "mypy-type-checker.severity": {
+        "error": "Information",
+        "note": "Information"
+    }
 }

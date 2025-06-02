@@ -3,12 +3,13 @@
  * @brief ROS 2 node for holonomic simulation
  * @author kousei
  * @date 2024-05-29
-*/
+ */
 #include <rclcpp/rclcpp.hpp>
 
 #include <holonomic_sim/robot_vel.hpp>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
   rclcpp::init(argc, argv);
   rclcpp::executors::MultiThreadedExecutor exec;
   const auto robot_vel =
