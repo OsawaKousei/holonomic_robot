@@ -14,7 +14,7 @@
     <xacro:four_wheel_caster_macro parent="base_link" base_radius="${sqrt(base_size/2*base_size/2*2)}" caster_radius="0.035" z_offset="-0.015"/>
 
     <xacro:lidar_macro suffix="base" parent="base_link" x="0.15" y="0" z="0.025" rate="20" max_range="20" samples="270" angle="135" noise="0.01"/>
-    
+
     <gazebo>
         <!-- Global odometer -->
         <plugin
@@ -28,7 +28,7 @@
         </plugin>
 
         <!-- Joint state publisher -->
-        <plugin filename="libignition-gazebo-joint-state-publisher-system.so" 
+        <plugin filename="libignition-gazebo-joint-state-publisher-system.so"
             name="ignition::gazebo::systems::JointStatePublisher">
             <topic>joint_states</topic>
         </plugin>

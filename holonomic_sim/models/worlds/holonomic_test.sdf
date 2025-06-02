@@ -59,17 +59,17 @@
               <property type="string" key="state">docked_collapsed</property>
             </gz-gui>
             </plugin>
-  
+
             <!-- View angle -->
             <plugin filename="ViewAngle" name="View angle">
             <gz-gui>
               <property type="string" key="state">docked_collapsed</property>
             </gz-gui>
             </plugin>
-  
+
               <!-- KeyPublisher plugin-->
             <plugin filename="KeyPublisher" name="Key Publisher"/>
-  
+
             <!-- visualize lidar -->
             <plugin filename="VisualizeLidar" name="Visualize Lidar">
             </plugin>

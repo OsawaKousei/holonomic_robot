@@ -115,5 +115,11 @@
     "mypy-type-checker.severity": {
         "error": "Information",
         "note": "Information"
-    }
+    },
+    "cSpell.words": [
+        "remappings",
+        "Robo",
+        "urdf",
+        "xacro"
+    ]
 }
